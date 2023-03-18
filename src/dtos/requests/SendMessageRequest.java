@@ -1,28 +1,31 @@
 package dtos.requests;
 
+import data.models.User;
+
 public class SendMessageRequest {
-    private String sender;
-    private String recipient;
+    private User sender;
+    private User recipient;
     private String message;
 
-    public SendMessageRequest(String recipient, String message) {
+    public SendMessageRequest(User sender, User recipient, String message) {
+        this.sender = sender;
         this.recipient = recipient;
         this.message = message;
     }
 
-    public String getSender() {
+    public User getSender() {
         return sender;
     }
 
-    public void setSender(String sender) {
+    public void setSender(User sender) {
         this.sender = sender;
     }
 
-    public String getRecipient() {
+    public User getRecipient() {
         return recipient;
     }
 
-    public void setRecipient(String recipient) {
+    public void setRecipient(User recipient) {
         this.recipient = recipient;
     }
 
