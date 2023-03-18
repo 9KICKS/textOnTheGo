@@ -3,6 +3,7 @@ package services;
 import data.models.Text;
 import data.models.User;
 import data.repositories.TextRepository;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TextServiceImpl implements TextService {
@@ -16,6 +17,18 @@ public class TextServiceImpl implements TextService {
     public void sendText(User senderName, User receiverNumber, String message) {
         Text text = new Text(senderName, receiverNumber, message);
         textRepository.addText(text);
+    }
+
+    @Override
+    public List<String> receiveTexts(User recipient) {
+        List<String> messages = new ArrayList<>();
+        List<Text> texts = textRepository.getAllTexts();
+        for (Text text : texts) {
+            if (text.getRecipient().equals(recipient)) {
+                messages.add(text.getSender().getUsername() + ": " + text.getMessage());
+            }
+        }
+        return messages;
     }
 
     public List<Text> getAllTexts() {
