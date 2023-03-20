@@ -1,6 +1,6 @@
-package data.repositories;
+package africa.semicolon.chatApplication.data.repositories;
 
-import data.models.Contact;
+import africa.semicolon.chatApplication.data.models.Contact;
 import java.util.ArrayList;
 import java.util.List;
 

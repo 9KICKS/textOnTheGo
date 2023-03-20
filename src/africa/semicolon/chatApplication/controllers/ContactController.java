@@ -1,7 +1,7 @@
-package controllers;
+package africa.semicolon.chatApplication.controllers;
 
-import dtos.requests.AddContactRequest;
-import dtos.responses.AddContactResponse;
+import africa.semicolon.chatApplication.dtos.requests.AddContactRequest;
+import africa.semicolon.chatApplication.dtos.responses.AddContactResponse;
 
 public class ContactController {
     public AddContactResponse addContact(AddContactRequest request) {

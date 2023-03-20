@@ -1,9 +1,9 @@
-package data.repositories;
+package africa.semicolon.chatApplication.services;
 
-import data.models.Contact;
+import africa.semicolon.chatApplication.data.models.Contact;
 import java.util.List;
 
-public interface ContactRepository {
+public interface ContactService {
     void addContact(Contact contact);
     Contact getContactByName(String name);
     List<Contact> getAllContacts();

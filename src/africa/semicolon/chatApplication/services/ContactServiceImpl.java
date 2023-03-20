@@ -1,7 +1,7 @@
-package services;
+package africa.semicolon.chatApplication.services;
 
-import data.models.Contact;
-import data.repositories.ContactRepository;
+import africa.semicolon.chatApplication.data.models.Contact;
+import africa.semicolon.chatApplication.data.repositories.ContactRepository;
 import java.util.List;
 
 public class ContactServiceImpl implements ContactService {
