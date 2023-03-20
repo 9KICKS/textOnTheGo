@@ -1,6 +1,6 @@
-package dtos.requests;
+package africa.semicolon.chatApplication.dtos.requests;
 
-import data.models.User;
+import africa.semicolon.chatApplication.data.models.User;
 
 public class SendMessageRequest {
     private User sender;
