@@ -1,6 +1,6 @@
-package dtos.requests;
+package africa.semicolon.chatApplication.dtos.requests;
 
-import data.models.User;
+import africa.semicolon.chatApplication.data.models.User;
 
 public class ReceiveMessageRequest {
     private User recipient;
@@ -9,7 +9,7 @@ public class ReceiveMessageRequest {
         this.recipient = recipient;
     }
 
-    public String getRecipient() {
+    public User getRecipient() {
         return recipient;
     }
 

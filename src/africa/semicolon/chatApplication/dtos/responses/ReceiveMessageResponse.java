@@ -1,6 +1,6 @@
-package dtos.responses;
+package africa.semicolon.chatApplication.dtos.responses;
 
-import data.models.Text;
+import africa.semicolon.chatApplication.data.models.Text;
 
 import java.util.List;
 

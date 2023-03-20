@@ -1,4 +1,4 @@
-package dtos.requests;
+package africa.semicolon.chatApplication.dtos.requests;
 
 public class RegisterUserRequest {
     private String firstName;
