@@ -1,4 +1,4 @@
-package dtos.responses;
+package africa.semicolon.chatApplication.dtos.responses;
 
 public class AddContactResponse {
     private String message;
