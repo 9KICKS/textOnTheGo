@@ -1,7 +1,7 @@
-package services;
+package africa.semicolon.chatApplication.services;
 
-import data.models.User;
-import data.repositories.UserRepository;
+import africa.semicolon.chatApplication.data.models.User;
+import africa.semicolon.chatApplication.data.repositories.UserRepository;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {

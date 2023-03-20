@@ -1,6 +1,6 @@
-package services;
+package africa.semicolon.chatApplication.services;
 
-import data.models.User;
+import africa.semicolon.chatApplication.data.models.User;
 import java.util.List;
 
 public interface UserService {
