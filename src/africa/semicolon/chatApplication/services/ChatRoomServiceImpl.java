@@ -1,11 +1,11 @@
-package services;
+package africa.semicolon.chatApplication.services;
 
-import data.models.ChatRoom;
-import data.models.Text;
-import data.models.User;
-import data.repositories.ChatRoomRepository;
-import data.repositories.TextRepository;
-import data.repositories.UserRepository;
+import africa.semicolon.chatApplication.data.models.ChatRoom;
+import africa.semicolon.chatApplication.data.models.Text;
+import africa.semicolon.chatApplication.data.models.User;
+import africa.semicolon.chatApplication.data.repositories.ChatRoomRepository;
+import africa.semicolon.chatApplication.data.repositories.TextRepository;
+import africa.semicolon.chatApplication.data.repositories.UserRepository;
 
 public class ChatRoomServiceImpl implements ChatRoomService {
     private final ChatRoomRepository chatRoomRepository;
