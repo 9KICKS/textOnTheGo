@@ -1,17 +1,20 @@
-package controllers;
+package africa.semicolon.chatApplication.controllers;
 
-import data.models.Text;
-import data.repositories.TextRepository;
-import dtos.requests.ReceiveMessageRequest;
-import dtos.requests.SendMessageRequest;
-import dtos.responses.ReceiveMessageResponse;
-import dtos.responses.SendMessageResponse;
+import africa.semicolon.chatApplication.data.models.Text;
+import africa.semicolon.chatApplication.data.repositories.TextRepository;
+import africa.semicolon.chatApplication.dtos.requests.ReceiveMessageRequest;
+import africa.semicolon.chatApplication.dtos.requests.SendMessageRequest;
+import africa.semicolon.chatApplication.dtos.responses.ReceiveMessageResponse;
+import africa.semicolon.chatApplication.dtos.responses.SendMessageResponse;
+import africa.semicolon.chatApplication.services.TextService;
 import java.util.List;
 
 public class TextController {
+    private final TextService textService;
     private final TextRepository textRepository;
 
-    public TextController(TextRepository textRepository) {
+    public TextController(TextService textService, TextRepository textRepository) {
+        this.textService = textService;
         this.textRepository = textRepository;
     }
 

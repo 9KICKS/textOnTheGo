@@ -1,6 +1,7 @@
-package data.repositories;
+package africa.semicolon.chatApplication.data.repositories;
 
-import data.models.Text;
+import africa.semicolon.chatApplication.data.models.Text;
+import africa.semicolon.chatApplication.data.models.User;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class TextRepositoryImpl implements TextRepository {
     }
 
     @Override
-    public List<Text> getTextsByRecipient(String recipient) {
+    public List<Text> getTextsByRecipient(User recipient) {
         List<Text> result = new ArrayList<>();
         for (Text text : texts) {
             if (text.getRecipient().equals(recipient)) {

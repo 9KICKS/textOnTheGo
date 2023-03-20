@@ -1,8 +1,8 @@
-package services;
+package africa.semicolon.chatApplication.services;
 
-import data.models.Text;
-import data.models.User;
-import data.repositories.TextRepository;
+import africa.semicolon.chatApplication.data.models.Text;
+import africa.semicolon.chatApplication.data.models.User;
+import africa.semicolon.chatApplication.data.repositories.TextRepository;
 import java.util.ArrayList;
 import java.util.List;
 

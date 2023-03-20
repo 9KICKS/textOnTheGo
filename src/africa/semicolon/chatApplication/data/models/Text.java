@@ -1,4 +1,4 @@
-package data.models;
+package africa.semicolon.chatApplication.data.models;
 
 import java.util.Date;
 
