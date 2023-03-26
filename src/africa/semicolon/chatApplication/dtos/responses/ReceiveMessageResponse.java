@@ -1,7 +1,6 @@
 package africa.semicolon.chatApplication.dtos.responses;
 
 import africa.semicolon.chatApplication.data.models.Text;
-
 import java.util.List;
 
 public class ReceiveMessageResponse {

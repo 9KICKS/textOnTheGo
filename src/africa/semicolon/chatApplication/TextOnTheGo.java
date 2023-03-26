@@ -20,6 +20,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class TextOnTheGo {
     private static UserController userController;
@@ -45,7 +46,7 @@ public class TextOnTheGo {
     private static void run() throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         while (true) {
             String[] options = {"Register", "Login", "Exit"};
-            int choice = JOptionPane.showOptionDialog(null, "Welcome to africa.semicolon.chatApplication.TextOnTheGo!", "africa.semicolon.chatApplication.TextOnTheGo", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+            int choice = JOptionPane.showOptionDialog(null, "TextOnTheGo!", "TextOnTheGo", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
             if (choice == 0) {
                 register();
             } else if (choice == 1) {
@@ -59,10 +60,10 @@ public class TextOnTheGo {
     }
 
     private static void register() {
-        String firstName = JOptionPane.showInputDialog(null, "Enter your first name:", "africa.semicolon.chatApplication.TextOnTheGo", JOptionPane.INFORMATION_MESSAGE);
-        String lastName = JOptionPane.showInputDialog(null, "Enter your last name:", "africa.semicolon.chatApplication.TextOnTheGo", JOptionPane.INFORMATION_MESSAGE);
-        int age = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter your age:", "africa.semicolon.chatApplication.TextOnTheGo", JOptionPane.INFORMATION_MESSAGE));
-        String username = JOptionPane.showInputDialog(null, "Enter your username:", "africa.semicolon.chatApplication.TextOnTheGo", JOptionPane.INFORMATION_MESSAGE);
+        String firstName = JOptionPane.showInputDialog(null, "Enter your first name:", "TextOnTheGo", JOptionPane.INFORMATION_MESSAGE);
+        String lastName = JOptionPane.showInputDialog(null, "Enter your last name:", "TextOnTheGo", JOptionPane.INFORMATION_MESSAGE);
+        int age = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter your age:", "TextOnTheGo", JOptionPane.INFORMATION_MESSAGE));
+        String username = JOptionPane.showInputDialog(null, "Enter your username:", "TextOnTheGo", JOptionPane.INFORMATION_MESSAGE);
         JPasswordField passwordField = new JPasswordField();
         JOptionPane.showConfirmDialog(null, passwordField, "Create password:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
         char[] passwordChars = passwordField.getPassword();
@@ -127,7 +128,8 @@ public class TextOnTheGo {
             case 1 -> {
                 try {
                     UIManager.setLookAndFeel(new FlatDarkLaf());
-                } catch (UnsupportedLookAndFeelException e) {JOptionPane.showMessageDialog(null, "Unable to set the Dark Mode theme. Using the default theme instead.", "Error", JOptionPane.ERROR_MESSAGE);
+                } catch (UnsupportedLookAndFeelException e) {
+                    JOptionPane.showMessageDialog(null, "Unable to set the Dark Mode theme. Using the default theme instead.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
             case 2 -> {
@@ -138,14 +140,6 @@ public class TextOnTheGo {
                 }
             }
         }
-        String[] languageOptions = {"English", "Spanish", "French"};
-        int languageChoice = JOptionPane.showOptionDialog(null, "Select TextOnTheGo language:", "TextOnTheGo", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, languageOptions, languageOptions[0]);
-        switch (languageChoice) {
-            case 0 -> Locale.setDefault(Locale.ENGLISH);
-            case 1 -> Locale.setDefault(new Locale("es"));
-            case 2 -> Locale.setDefault(Locale.FRENCH);
-        }
-        JOptionPane.showMessageDialog(null, "TextOnTheGo customized successfully.");
     }
 
     private static void receiveMessage() {

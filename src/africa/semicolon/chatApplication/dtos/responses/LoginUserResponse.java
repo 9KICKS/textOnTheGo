@@ -9,11 +9,6 @@ public class LoginUserResponse {
         this.message = message;
     }
 
-    public LoginUserResponse(String message, boolean success) {
-        this.message = message;
-        this.success = success;
-    }
-
     public boolean isSuccessful() {
         return this.success;
     }
